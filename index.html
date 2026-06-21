@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- Memastikan tampilan pas di layar HP (Mobile Responsive) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Admin Panel - Sumedang Funtastic Walk</title>
+    <meta name="description" content="Sistem Manajemen dan Validasi Peserta Sumedang Funtastic Walk 2026">
+    
+    <!-- Favicon (Opsional, silakan ganti URL gambarnya jika ada) -->
+    <link rel="icon" href="https://res.cloudinary.com/dvvjbnjzd/image/upload/v1781416074/header_14062026_a8zpnh.jpg" type="image/x-icon">
+
+    <style>
+        /* Menghapus semua jarak bawaan browser agar iframe full screen */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Mencegah scrollbar ganda (hanya scroll dari dalam aplikasi) */
+            background-color: #f3f4f6; /* Warna abu-abu senada dengan latar aplikasi */
+            font-family: sans-serif;
+        }
+
+        /* Pengaturan Iframe agar membentang sempurna */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Animasi loading sederhana sebelum Google Script selesai dimuat */
+        #loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #d84b22;
+            z-index: -1; /* Loader berada di balik iframe, akan tertutup jika iframe sudah merender */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Teks loading ini akan tertutup otomatis saat iframe Google Script muncul -->
+    <div id="loader">
+        <h2 style="margin-bottom: 5px;">Memuat Sistem...</h2>
+        <p style="color: #666; font-size: 14px;">Menghubungkan ke server aman</p>
+    </div>
+
+    <!-- IFRAME GOOGLE APPS SCRIPT -->
+    <iframe 
+        src="https://script.google.com/macros/s/AKfycbwF-0UGSDXrEZ9HAiX5ZXyXC3olPod3TYJLseet5YvNty3i8Ow5P1fHLnNq6ZW8CtD8/exec" 
+        title="Sistem Admin Sumedang Funtastic Walk" 
+        allowfullscreen>
+    </iframe>
+
+</body>
+</html>
